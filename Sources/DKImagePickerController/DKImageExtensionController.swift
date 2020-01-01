@@ -134,6 +134,7 @@ public class DKImageExtensionController: NSObject {
     
     @objc public class func unregisterExtension(for type: DKImageExtensionType) {
         DKImageExtensionController.extensions[type] = nil
+        DKImageExtensionController.defaultExtensions[type] = nil
     }
     
     private func createContext() -> DKImageExtensionContext {
